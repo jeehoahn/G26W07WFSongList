@@ -40,6 +40,7 @@
             listSong.Size = new Size(776, 364);
             listSong.TabIndex = 0;
             listSong.SelectedIndexChanged += OnChanged;
+            listSong.DoubleClick += OnYoutube;
             // 
             // txtTitle
             // 
