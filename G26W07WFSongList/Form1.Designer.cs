@@ -30,17 +30,17 @@
             btnAdd = new Button();
             txtSelected = new TextBox();
             btnDelete = new Button();
+            txtFilter = new TextBox();
             SuspendLayout();
             // 
             // listSong
             // 
             listSong.FormattingEnabled = true;
-            listSong.Location = new Point(12, 12);
+            listSong.Location = new Point(12, 52);
             listSong.Name = "listSong";
-            listSong.Size = new Size(776, 364);
+            listSong.Size = new Size(776, 324);
             listSong.TabIndex = 0;
             listSong.SelectedIndexChanged += OnChanged;
-            listSong.DoubleClick += OnYoutube;
             // 
             // txtTitle
             // 
@@ -95,15 +95,25 @@
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(184, 29);
             btnDelete.TabIndex = 6;
-            btnDelete.Text = "button1";
+            btnDelete.Text = "삭제";
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += OnDelete;
+            // 
+            // txtFilter
+            // 
+            txtFilter.Location = new Point(12, 12);
+            txtFilter.Name = "txtFilter";
+            txtFilter.PlaceholderText = "제목 또는 가수 검색";
+            txtFilter.Size = new Size(776, 27);
+            txtFilter.TabIndex = 7;
+            txtFilter.TextChanged += OnFilterChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtFilter);
             Controls.Add(btnDelete);
             Controls.Add(txtSelected);
             Controls.Add(btnAdd);
@@ -126,5 +136,6 @@
         private Button btnAdd;
         private TextBox txtSelected;
         private Button btnDelete;
+        private TextBox txtFilter;
     }
 }
